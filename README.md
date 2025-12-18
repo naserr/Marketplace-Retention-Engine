@@ -22,7 +22,6 @@ In high-volume marketplaces, retaining high-LTV (Lifetime Value) users is critic
 
 The solution follows an **ETL (Extract, Transform, Load)** pattern combined with a UI layer:
 
-```mermaid
 graph LR
     A[(SQLite DB)] -->|Raw Data| B(Churn Logic SQL)
     B -->|Segmented Users| C{Python Orchestrator}
@@ -73,4 +72,5 @@ Output: This will open a local web interface showing real-time churn metrics.
 Automated Data Flow: Zero manual intervention required to move users from "At Risk" to "Campaign Enrolled".
 Scalable Architecture: Designed to handle millions of rows by leveraging SQL for heavy lifting before loading into Python.
 Full-Stack Implementation: Covers the entire loop from Database Schema -> Backend Logic -> Frontend Visualization.
-Developed by Naser Rahmani 
+
+Developed by Naser Rahmani .
