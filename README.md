@@ -22,7 +22,7 @@ In high-volume marketplaces, retaining high-LTV (Lifetime Value) users is critic
 
 The solution follows an **ETL (Extract, Transform, Load)** pattern combined with a UI layer:
 
-graph LR
+##graph LR
     A[(SQLite DB)] -->|Raw Data| B(Churn Logic SQL)
     B -->|Segmented Users| C{Python Orchestrator}
     C -->|Trigger API| D[Braze / CRM Simulator]
@@ -33,13 +33,15 @@ main.py (The Engine): Runs the nightly batch job, executes the SQL analysis, and
 dashboard.py (The UI): A React-style interactive dashboard built with Streamlit for monitoring user status and logs.
 sql/churn_analysis.sql: Complex queries filtering for specific user behaviors (Churn Risk + High LTV).
 connectors/braze_client.py: A modular API client mocking the POST requests to an external automation provider.
-🛠 Tech Stack
+
+## 🛠 Tech Stack
 Core Logic: Python 3.9+
 Data Engineering: SQL (SQLite), Pandas
 Visualization: Streamlit
 API Integration: RESTful Requests (Mocked)
 Environment: Dotenv for secure key management
-🚀 How to Run
+
+## 🚀 How to Run
 1. Install Dependencies
 
 Bash
@@ -68,7 +70,8 @@ python3 -m streamlit run dashboard.py
 
 
 Output: This will open a local web interface showing real-time churn metrics.
-📸 Project Highlights
+
+## 📸 Project Highlights
 Automated Data Flow: Zero manual intervention required to move users from "At Risk" to "Campaign Enrolled".
 Scalable Architecture: Designed to handle millions of rows by leveraging SQL for heavy lifting before loading into Python.
 Full-Stack Implementation: Covers the entire loop from Database Schema -> Backend Logic -> Frontend Visualization.
