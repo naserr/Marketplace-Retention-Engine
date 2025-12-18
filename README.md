@@ -22,7 +22,8 @@ In high-volume marketplaces, retaining high-LTV (Lifetime Value) users is critic
 
 The solution follows an **ETL (Extract, Transform, Load)** pattern combined with a UI layer:
 
-##graph LR
+```mermaid
+graph LR
     A[(SQLite DB)] -->|Raw Data| B(Churn Logic SQL)
     B -->|Segmented Users| C{Python Orchestrator}
     C -->|Trigger API| D[Braze / CRM Simulator]
