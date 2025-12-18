@@ -28,6 +28,7 @@ graph LR
     B -->|Segmented Users| C{Python Orchestrator}
     C -->|Trigger API| D[Braze / CRM Simulator]
     C -->|Visuals| E[Streamlit Dashboard]
+```
 
 Key Components:
 main.py (The Engine): Runs the nightly batch job, executes the SQL analysis, and syncs data with the external API.
