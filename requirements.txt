@@ -1,0 +1,5 @@
+# sqlite3 is part of the standard library; included here per demo requirements
+sqlite3
+requests==2.31.0
+pandas==2.2.2
+python-dotenv==1.0.1
